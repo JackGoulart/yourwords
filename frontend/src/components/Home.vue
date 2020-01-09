@@ -43,7 +43,6 @@
 
 <script>
 import Input from "./Input.vue";
-// import Carousel from "./Carousel";
 
 export default {
   data: () => ({
