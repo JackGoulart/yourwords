@@ -4,13 +4,13 @@ Your words is a webapp with the main aim to help ESL to get new words and increa
 
 To simplify it is a vocabulary generator.
 
-##Stack
- >Flask \
- >Vue.js\
- >Vuetifyjs \
- >axios
+## Stack
+* Flask 
+* Vue.js
+* Vuetifyjs 
+* Axios
 
-It's a vue spa app running over a Flask Api that use external resources to provide the lyrics and translations.
+It's a vue spa app running over a Flask Api that use external resources to provide the lyrics and translations.\
 I used vuetifyjs pre-made layouts.
 
 Site: https://www.yourwords.com.br/ 
