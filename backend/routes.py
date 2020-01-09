@@ -4,6 +4,7 @@ from flask import request, render_template, jsonify
 import requests
 import uuid
 import re
+# for reasons of security I created a module with external passwords to acess apis that I've used here.
 from backend import user_password_external
 
 

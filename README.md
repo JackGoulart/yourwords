@@ -1,6 +1,6 @@
 # yourwords 
 
-Your words is a webapp with the main aim to help ESL to get new words and increase their vocabulary through musics.
+Your words is a web app with the main aim to help ESL to get new words and increase their vocabulary through musics.
 
 To simplify it is a vocabulary generator.
 
