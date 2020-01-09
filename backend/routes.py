@@ -4,10 +4,7 @@ from flask import request, render_template, jsonify
 import requests
 import uuid
 import re
-
-
-# lastfm api_key
-api_key = "ff4da58abee7dd54526d58e006aa0a00"
+from backend import user_password_external
 
 
 @app.route('/')
@@ -17,6 +14,8 @@ def index():
 
 @app.route('/search_song')
 def search_song():
+    #lastfm api_key
+    api_key = user_password_external.LASTFMAPIKEY
     song = request.args.get('song')
     rqt = requests.get(
         'http://ws.audioscrobbler.com/2.0/?method=track.search&track={}&api_key={}&format=json'.format(song, api_key))
@@ -39,7 +38,7 @@ def bot_music(art, music):
 
         "art": art,
         "mus": music,
-        "apikey": "{966617a8d3d164c33d5e52d8b36f1b8d}"
+        "apikey": "{user_password_external.VAGALUMEAPIKEY}"
     }
 
     url = 'https://api.vagalume.com.br/search.php'
@@ -61,7 +60,7 @@ def yw_translate(words):
     constructed_url = base_url + path + params
 
     headers = {
-        'Ocp-Apim-Subscription-Key': 'e955095fe410407c92f9534707b10b88',
+        'Ocp-Apim-Subscription-Key': user_password_external.MSCOGNITIVEAPIKEY,
         'Content-type': 'application/json',
         'X-ClientTraceId': str(uuid.uuid4())
     }
@@ -167,10 +166,5 @@ def music_vocabulary(lyric):
                 'text'].lower() + '</p>'
 
     return "<h1>Vocabulario</h1> </br>" + new + "<strong><p>" + total_palavras + "</p>" + "<p>" + palavras_n_rep + "</p>" +"<p>"+ average +"</p> </strong>"
-
-
-@app.route('/indexjq')
-def vue():
-    return render_template('indexjq.html')
 
 

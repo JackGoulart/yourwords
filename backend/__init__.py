@@ -1,8 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from backend import user_password_external
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '6cc755bc60a328138498a6c010532565'
+app.config['SECRET_KEY'] = user_password_external.APPKEY
 app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///mydictionary.db'
 db = SQLAlchemy(app)
 
