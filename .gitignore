@@ -1,7 +1,7 @@
 venv
 .idea/
-*/__pycache__/
-backend/__pycache__/
-backend/models/__pycache__/
+*/__pycache__/*
+backend/__pycache__/*
+backend/models/__pycache__/*
 frontend/node_modules/
 backend/user_password_external.py
