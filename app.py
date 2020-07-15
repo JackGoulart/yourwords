@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from backend import user_password_external
+import user_password_external
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = user_password_external.APPKEY
@@ -8,7 +8,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///mydictionary.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from backend import routes
+import routes
+
+
+
 
 #TODO: add system of user login,
 # flash cards,

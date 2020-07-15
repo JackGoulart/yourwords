@@ -1,11 +1,11 @@
-from backend import app
-from backend.models.mydictionary import MyDictionary
+from  app import app
+from models.mydictionary import MyDictionary
 from flask import request, render_template, jsonify
 import requests
 import uuid
 import re
 # for reasons of security I created a module with external passwords to access apis that I've used here.
-from backend import user_password_external
+import user_password_external
 
 
 @app.route('/')
