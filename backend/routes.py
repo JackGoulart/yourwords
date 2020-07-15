@@ -39,7 +39,7 @@ def bot_music(art, music):
 
         "art": art,
         "mus": music,
-        "apikey": "{user_password_external.VAGALUMEAPIKEY}"
+        "apikey": f"{user_password_external.VAGALUMEAPIKEY}"
     }
 
     url = 'https://api.vagalume.com.br/search.php'
@@ -77,6 +77,7 @@ def lyric():
     art = request.args.get('art')
     music = request.args.get('music')
     lyric = bot_music(art, music)
+
 
     song = ''
 
